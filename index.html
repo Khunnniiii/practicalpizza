@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css"/>
+<title> Pizza by the SLICE </title>
+</head>
+<body>
+<h1> Pizza by the SLICE </h1>
+<h2> Order </h2>
+
+<form>
+	<h3> Personal Details </h3>
+	<label for="fullname">Full Name:</label>
+	<input type="text" id="fullname" name="fullname" required minlength="5" maxlength="60">
+
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" required>
+
+	<label for="phone">Phone: </label>
+	<input type="tel" id="phone" name="phone" required>
+
+	<label for="age">Age: </label>
+	<input type="number" id="age" name="age" required>
+
+	<h4>Pizza Size</h4>
+	<input type="radio" id="small" name="size" value="small" required> Small
+	<input type="radio" id="medium" name="size" value="medium" required checked> Medium
+	<input type="radio" id="large" name="size" value="large" required> Large
+	<input type="radio" id="extralarge" name="size" value="extralarge" required> Extra Large
+
+	<select name="crust" required>
+		<option disabled selected>--Choose a crust--</option>
+		<option value="Thin">Thin</option>
+		<option value="Thick">Thick</option>
+		<option value="Stuffed">Stuffed</option>
+		<option value="Gluttenfree">Glutten-Free</option>
+	</select>
+
+	<select name="sauce" required>
+		<option disabled selected>--Choose a sauce--</option>
+		<optgroup label="Classic">
+			<option value="tomato">Tomato</option>
+			<option value="garlicwhite">Garlic White</option>
+		<optgroup label="Special">
+			<option value="pesto">Pesto</option>
+			<option value="barbecue">Barbecue</option>
+	</select>
+
+	<input type="checkbox" checked disabled> Cheese
+	<input type="checkbox" name="toppings"> Pepperoni
+	<input type="checkbox" name="toppings"> Mushroom
+	<input type="checkbox" name="toppings"> Onions
+	<input type="checkbox" name="toppings"> Bell Pepper
+	<input type="checkbox" name="toppings"> Olives
+	<input type="checkbox" name="toppings"> Bacon
+	<input type="checkbox" name="toppings"> Pineapple
+
+	<input type="radio" name="delivery"> Home Delivery
+	<input type="radio" name="delivery"> Pick-up
+
+	<label for="address">Address: </label>
+	<textarea id="address" name="address" rows="3"></textarea>
+
+	<fieldset>
+		<legend> Payment Details </legend>
+		<label for="payment">Payment Method: </label>
+		<select name="payment" id="payment" required>
+			<option disabled selected>--Choose a payment method--</option>
+			<option value="creditcard">Credit Card</option>
+			<option value="gcash">GCash</option>
+			<option value="cashondelivery">Cash On Delivery</option>
+		</select>
+
+		<label for="cardnumber">Card Number (Required for Credit Card Only): </label>
+		<input type="text" id="cardnumber" name="cardnumber" pattern="\d{16}" placeholder="1234567890123456">
+	</fieldset>
+
+	<table border="1">
+	<tr>
+	<th>Size</th>
+	<th>Base Price</th>
+	<th>Extra Toppings</th>
+	</tr>
+
+	<tr>
+	<td>Small</td>
+	<td>₱199</td>
+	<td>+₱20</td>
+	</tr>
+
+	<tr>
+	<td>Medium</td>
+	<td>₱299</td>
+	<td>+₱25</td>
+	</tr>	
+
+	<tr>
+	<td>Large</td>
+	<td>₱399</td>
+	<td>+₱30</td>
+	</tr>
+
+	<tr>
+	<td>Extra Large</td>
+	<td>₱499</td>
+	<td>+₱35</td>
+	</tr>
+
+	<button type="submit">Place My Order</button>
+	<button type="reset">Start Over</button>
+</form>
+</body>
+
+
+
+
+
+
+</html>
